@@ -24,3 +24,15 @@ doc1
  .catch((err) => {
  console.error(err);
  });
+ manypersons=[{ name: 'Simon',age:42,Gender:"Male",Salary:3456 }
+ ,{ name: 'Neesha',age:23,Gender:"Female",Salary:1000 }
+ ,{ name: 'Mary',age:27,Gender:"Female",Salary:5402 },
+ { name: 'Mike',age:40,Gender:"Male",Salary:4519 }
+ ]
+
+
+ person_doc.insertMany(manypersons).then(function(){
+ console.log("Data inserted") // Success
+ }).catch(function(error){
+ console.log(error) // Failure
+ });
